@@ -28,7 +28,7 @@ class MCAppleAlbumAPI {
                 {
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                     {
-                        print(json["feed"] as? Any)
+//                        print(json["feed"])
                         if let rest = json["feed"] as? [String: Any]
                         {
                             for element in rest
@@ -83,7 +83,7 @@ class MCAppleAlbumAPI {
             if item.key == "artworkUrl100" {
                 itemArtworkUrl100 = item.value as? String ?? ""
                 
-                if let url = URL(string: itemArtworkUrl100) as? URL {
+                if let url = URL(string: itemArtworkUrl100) {
                     if let imageData: NSData = NSData(contentsOf: url) {
                         itemThumbnailImage = UIImage(data: imageData as Data)
                     }

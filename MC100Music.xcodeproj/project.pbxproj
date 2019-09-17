@@ -10,7 +10,7 @@
 		4DAD0599232EFD500096EC46 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD0598232EFD500096EC46 /* Album.swift */; };
 		4DAD059B232F00400096EC46 /* MCAppleAlbumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD059A232F00400096EC46 /* MCAppleAlbumAPI.swift */; };
 		4DDF534A232B5552005402BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDF5349232B5552005402BC /* AppDelegate.swift */; };
-		4DDF534C232B5552005402BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDF534B232B5552005402BC /* ViewController.swift */; };
+		4DDF534C232B5552005402BC /* MCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDF534B232B5552005402BC /* MCDetailViewController.swift */; };
 		4DDF5351232B5553005402BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DDF5350232B5553005402BC /* Assets.xcassets */; };
 		4DDF535F232B5553005402BC /* MC100MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDF535E232B5553005402BC /* MC100MusicTests.swift */; };
 		4DDF536A232C9AFF005402BC /* MCAlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDF5369232C9AFF005402BC /* MCAlbumTableViewController.swift */; };
@@ -32,7 +32,7 @@
 		4DAD059A232F00400096EC46 /* MCAppleAlbumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAppleAlbumAPI.swift; sourceTree = "<group>"; };
 		4DDF5346232B5552005402BC /* MC100Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC100Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DDF5349232B5552005402BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DDF534B232B5552005402BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DDF534B232B5552005402BC /* MCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCDetailViewController.swift; sourceTree = "<group>"; };
 		4DDF5350232B5553005402BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DDF5355232B5553005402BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DDF535A232B5553005402BC /* MC100MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MC100MusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				4DDF5349232B5552005402BC /* AppDelegate.swift */,
-				4DDF534B232B5552005402BC /* ViewController.swift */,
+				4DDF534B232B5552005402BC /* MCDetailViewController.swift */,
 				4DE58F90232D3C360042D7F3 /* MCTopNavigationController.swift */,
 				4DDF5369232C9AFF005402BC /* MCAlbumTableViewController.swift */,
 				4DDF5350232B5553005402BC /* Assets.xcassets */,
@@ -202,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DAD0599232EFD500096EC46 /* Album.swift in Sources */,
-				4DDF534C232B5552005402BC /* ViewController.swift in Sources */,
+				4DDF534C232B5552005402BC /* MCDetailViewController.swift in Sources */,
 				4DE58F91232D3C360042D7F3 /* MCTopNavigationController.swift in Sources */,
 				4DDF534A232B5552005402BC /* AppDelegate.swift in Sources */,
 				4DDF536A232C9AFF005402BC /* MCAlbumTableViewController.swift in Sources */,

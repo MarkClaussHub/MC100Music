@@ -19,17 +19,25 @@ class MCAlbumTableViewController : UITableViewController
     override func loadView() {
         super.loadView()
         tableView.dataSource = self
-        
+        tableView.delegate = self
+        tableView.allowsSelection = true
+        tableView.isUserInteractionEnabled = true
+        tableView.insetsContentViewsToSafeArea = true
+        tableView.estimatedRowHeight = 50.0
+        tableView.cellLayoutMarginsFollowReadableWidth = true
+//        tableView.translatesAutoresizingMaskIntoConstraints = false
+//        tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
+//        tableView.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+//        tableView.trailingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+//        tableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+
         appleAlbumAPI.fetchAlbumsJSON({
             self.dataloadedShowInTable()
         })
         view.backgroundColor = .blue
-        tableView.backgroundColor = .yellow
-        tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+//        tableView.backgroundColor = .yellow
     }
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -66,9 +74,18 @@ class MCAlbumTableViewController : UITableViewController
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rowExpected = indexPath.row
+        let rowAlbum: Album = albumsList[rowExpected]
+        let detailView = MCDetailViewController()
+        detailView.thisAlbum = rowAlbum
+        self.navigationController?.pushViewController(detailView, animated: true)
+    }
     func dataloadedShowInTable() {
         tableView.reloadData()
     }
+    
+    
 }
 
 

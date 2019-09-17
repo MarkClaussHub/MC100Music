@@ -13,16 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var navigationController : MCTopNavigationController?
-    var mcTableViewController : MCAlbumTableViewController? = MCAlbumTableViewController(style: .plain)
+    var mcTableViewController : MCAlbumTableViewController = MCAlbumTableViewController(style: .plain)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow()
+        window = UIWindow(frame: UIScreen.main.nativeBounds)
+        window?.translatesAutoresizingMaskIntoConstraints = false
         
         guard window != nil  else { return false }
         window?.backgroundColor = .white
         
-        navigationController = MCTopNavigationController(rootViewController: mcTableViewController!)
+        navigationController = MCTopNavigationController(rootViewController: mcTableViewController)
         guard navigationController != nil else { return false }
         navigationController?.view.backgroundColor = .red
         window?.rootViewController = navigationController
